@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class MetodosMatriz{
+public class MetodosArray2{
     public static void main(String[] args){
         int[][] ar1, ar2, ar3;
         int[][] ar1orden, ar2orden;
