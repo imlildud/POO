@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class MetodosCombinacion{
+
+public class MetodosFactorial {
     public static void main(String[] args){
 
         Combinacion obs = new Combinacion();
