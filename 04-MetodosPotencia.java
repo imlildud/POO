@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Examen {
+
+public class MetodosPotencia {
     public static void main(String[] args){
 
         Potencia obs = new Potencia();
