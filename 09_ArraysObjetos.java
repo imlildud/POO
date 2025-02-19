@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class ArreglosObjetos{
+public class ArraysObjetos{
     public static void main(String[] args) {
         int cantAlum = Integer.parseInt(JOptionPane.showInputDialog("Teclea número de Alumnos a registrar"));
         VectorOb vectorOb = new VectorOb();
