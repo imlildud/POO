@@ -1,13 +1,14 @@
 import java.util.Scanner;
-public class MatrizCarros{
-    public static void main(String[] args){
+
+public class ArrayEstacionamiento {
+    public static void main(String[] args) {
 
         Estacionamiento estacionamiento = new Estacionamiento();
         Scanner scanner = new Scanner(System.in);
 
         while(true){
             System.out.println("Bienvenido al sistema de estacionamiento:");
-            System.out.println("1: Estacionar veh�culo");
+            System.out.println("1: Estacionar vehiculo");
             System.out.println("2: Mostrar estacionamiento");
             System.out.println("3: Cerrar");
 
@@ -22,7 +23,7 @@ public class MatrizCarros{
                     if (estacionamiento.esEspacioDisponible(fila, columna)){
                         estacionamiento.estacionarVehiculo(fila, columna);
                     }else{
-                        System.out.println("El espacio est� ocupado.");
+                        System.out.println("El espacio esta ocupado.");
                     }
                     break;
                 case 2:
@@ -31,7 +32,7 @@ public class MatrizCarros{
                 case 3:
                     return;
                 default:
-                    System.out.println("Opci�n no v�lida, no seas wey");
+                    System.out.println("Opcion no valida, no seas wey");
             }
         }
     }
@@ -45,11 +46,11 @@ abstract class Vehiculo {
     public abstract double calcularImpuesto();
     public void capturar(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese el color del veh�culo:");
+        System.out.println("Ingrese el color del vehiculo:");
         this.color = scanner.nextLine();
-        System.out.println("Ingrese el modelo del veh�culo:");
+        System.out.println("Ingrese el modelo del vehiculo:");
         this.modelo = scanner.nextLine();
-        System.out.println("Ingrese el precio del veh�culo:");
+        System.out.println("Ingrese el precio del vehiculo:");
         this.precio = scanner.nextDouble();
     }
     public void mostrar() {
@@ -94,7 +95,7 @@ class Estacionamiento{
         Scanner scanner = new Scanner(System.in);
 
         if (esEspacioDisponible(fila, columna)) {
-            System.out.println("Selecciona el tipo de veh�culo (1- El�ctrico, 2- Combusti�n): ");
+            System.out.println("Selecciona el tipo de vehiculo (1- Electrico, 2- Combustion): ");
             int tipo = scanner.nextInt();
             Vehiculo vehiculo;
 
@@ -109,14 +110,14 @@ class Estacionamiento{
             vehiculo.mostrar();
 
             matVec[fila][columna] = vehiculo;
-            System.out.println("Veh�culo estacionado correctamente.");
+            System.out.println("Vehiculo estacionado correctamente.");
         }else{
-            System.out.println("El espacio seleccionado ya est� ocupado.");
+            System.out.println("El espacio seleccionado ya esta ocupado.");
         }
     }
 
     public void mostrarEstacionamiento(){
-        System.out.println("Reporte de veh�culos en el estacionamiento:");
+        System.out.println("Reporte de vehiculos en el estacionamiento:");
         Vehiculo vehiculo;
 
         for (int i = 0; i < 5; i++){
@@ -124,7 +125,7 @@ class Estacionamiento{
                 if (matVec[i][j] != null){
                     System.out.println("Fila " + i + ", Columna " + j + ": Ocupado");
                 }else{
-                    System.out.println("Fila " + i + ", Columna " + j + ": Vac�o");
+                    System.out.println("Fila " + i + ", Columna " + j + ": Vacio");
                 }
             }
         }
