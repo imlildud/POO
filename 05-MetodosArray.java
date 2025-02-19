@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class MetodosArrayClass {
+
+public class MetodosArray {
     public static void main(String[] args){
         int x;
         String res=" ";
