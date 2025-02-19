@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class MetodosSeno {
+
+public class MetodosTrigonometria {
     public static void main(String[] args){
 
         Seno obs = new Seno();
